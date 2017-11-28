@@ -1,7 +1,7 @@
 @extends('layouts.base')
 @section('content')
-<h2>Hello World</h2>
+<h2>{{$obj->name}}</h2>
 <div>
--- Body --
+{!!$obj->body!!}
 </div>
 @endsection
