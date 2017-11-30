@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Minsk',
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------
@@ -167,7 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+		Laraveldaily\Quickadmin\QuickadminServiceProvider::class,
         /*
          * Application Service Providers...
          */

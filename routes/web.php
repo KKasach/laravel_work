@@ -12,3 +12,13 @@
 */
 
 Route::get('/', 'BaseController@getIndex');
+Route::get('/products', 'ProductController@getAll');
+Route::get('/product/{id}', 'ProductController@getOne');
+
+//Route:: get('/catalog/(id)', 'ProductController@getCatalog');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
