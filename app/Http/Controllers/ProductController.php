@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Catalog;
 class ProductController extends Controller
 {
     //
@@ -19,5 +20,11 @@ class ProductController extends Controller
 		$product = Product::find($id);
 		return view('product',compact('product'));
 	}
+	
+	public function getCat($id =0){
+		$cat=Catalog::find($id);
+		return view('catalog', compact('cat'));
+	}
+	
 }
 

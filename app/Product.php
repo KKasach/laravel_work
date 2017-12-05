@@ -39,13 +39,8 @@ class Product extends Model {
         Product::observe(new UserActionsObserver);
     }
     
-    public function catalog()
+    public function catalogs()
     {
-        return $this->hasOne('App\Catalog', 'id', 'catalog_id');
-    }
-
-
-    
-    
-    
+        return $this->belongsTo(\App\Catalog::class, 'catalog_id');
+    } 
 }

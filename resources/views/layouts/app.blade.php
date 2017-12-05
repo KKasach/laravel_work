@@ -32,6 +32,14 @@
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
+				
+				<div class="menu">
+					@foreach($catalogs as $cat)
+					<a href="{{asset('catalog/'.$cat->id)}}" class="btn btn-block btn-success">
+						{{$cat->name}}
+					</a>
+					@endforeach
+				</div>				
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
