@@ -14,7 +14,11 @@ class AdminController extends Controller
 		 //dd($request->products);
 		 
 		 if ($request->products){
-			 return view('admin',compact('products'));
+			
+			$products=$request->products;
+			
+			return view('admin',compact('products'));
+			
 		 } else {
 			 return view('product');
 		 }

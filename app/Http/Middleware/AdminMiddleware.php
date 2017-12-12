@@ -27,8 +27,8 @@ class AdminMiddleware
 				return redirect('/home');
 		};
 		
-		$products = Product::where('picture', '')->get();
-		$request->merge(compact('products']));
+		$products = Product::where('photo', null)->get();
+		$request->merge(compact('products'));
 		
 	
         return $next($request);
