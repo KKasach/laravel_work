@@ -24,3 +24,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/home', 'HomeController@postIndex');
 
+Route::group(["middleware"=>["admin"]], function(){
+	Route::get('admin/index', 'AdminController@getIndex');
+});
